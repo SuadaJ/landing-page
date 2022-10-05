@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/** General Styles **/
+a {
+    text-decoration: none;
+    color: #282826;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #282826;
+    background-color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    margin-left: 20px;
+    height: 40px;
+    width: 100px;
+    background-color: white;
+    border: solid 2px #282826;
+    ;
+    border-radius: 20px;
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    background-color: #4E52FB;
+    color: white;
+    border: 2px solid #4E52FB;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.black-btn {
+    background-color: #282826;
+    border: solid 2px #282826;
+    ;
+    color: white;
+}
+
+.black-btn:hover {
+    background-color: white;
+    color: #4E52FB;
+    border: 2px solid white;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* All Sections Container **/
+.container {
+    width: 90%;
+    margin: 0 5%;
+    padding: 0 20px;
+    background-color: white;
+}
+
+/** Header Section **/
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 15px 0;
+}
+
+nav {
+    display: flex;
+    list-style: none;
+}
+
+li {
+    margin: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo__icon {
+    width: 20px;
+    height: 20px;
+    background-color: #4E52FB;
+    /*rgb(26, 150, 150)*/
+    margin-right: 10px;
+}
+
+.nav-item:hover {
+    border-bottom: solid 5px #4E52FB;
+    padding-bottom: 5px;
+}
+
+.menu-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 4em;
+    color: #282826;
+    opacity: 1;
+    margin: 0 0 20px 0;
+}
+
+/** Content Area Section **/
+.content-area {
+    width: 90%;
+    margin: 50px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-area__left {
+    width: 50%;
+}
+
+.content-area__highlight {
+    display: inline;
+    color: #4E52FB;
+}
+
+.content-area__text {
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+
+.email-modal__error-message {
+    color: red;
+    margin-bottom: .4rem;
+    font-size: .8rem;
+    margin-left: 20px;
+    display: none;
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+}
+
+.email-modal__error-message--active {
+    display: block;
+}
+
+.email-modal__form-group {
+    background: white;
+    display: flex;
+    width: 450px;
+    height: 50px;
+    margin: 10px 0 20px;
+    margin-top: 0px;
+    border-radius: 20px;
+    border: 1px solid #282826;
+}
+
+.email-modal__input {
+    background: white;
+    display: flex;
+    border: 0px solid;
+    width: 100%;
+    margin-left: 5px;
+    padding-left: 15px;
+    border-radius: 25px;
+}
+
+.email-modal__button {
+    background: #282826;
+    color: white;
+    border: 5px solid #282826;
+    width: 170px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.email-modal__decline-offer {
+    color: rgb(108, 148, 199);
+    text-decoration: underline;
+    font-size: .9rem;
+    color: #282826;
+    opacity: 0.9;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.email-modal__decline-offer:hover {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.content-area__right {
+    object-fit: contain;
+    width: 50%;
+}
+
+.content-area__right-image {
+    width: 100%;
+    height: 100%;
+}
+
+.container-shade {
+    background-color: black;
+    opacity: 0.9;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: none;
+}
+
+.thank-you {
+    width: 40%;
+    height: 60%;
+    background-color: white;
+    padding-right: 20px;
+    position: absolute;
+    display: none;
+}
+
+.thank-you__container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.thank-you__x {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+.space {
+    width: 50px;
+    height: 1px;
+}
+
+.thank-you__x-btn {
+    width: 80px;
+    height: 80px;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+@media screen and (max-width: 1177px) {
+    .content-area__right-image{
+        width: 90%;
+        height: 90%;
+        margin-left: 40px;
+        margin-bottom: 70px;
+    }
+    .content-area__left{
+        margin-top: 20px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    .container{
+        width: 100%;
+        margin: 0px;
+        padding: 10px 5px;
+    }
+    header{
+        width: 90%;
+        margin: 10px 5%;
+    }
+}
+@media screen and (max-width: 1065px) {
+    .content-area__right{
+        display: none;
+    }
+    .content-area__left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 890px) {
+    .nav-item{
+        display: none;
+        width: 0px;
+        height: 0px;
+        margin: 0px;
+    }
+    li{
+        margin: 0px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .logo-banner{
+        width: 80%;
+    }
+    .email-modal__form-group{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 460px) {
+    /* make the email input different */
+    .email-modal__form-group{
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0px;
+        border: none;
+        height: 125px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .email-modal__input{
+        margin-bottom: 20px;
+        display: block;
+        background-color: lightgray;
+        color: white;
+        height: 50px;
+        width: 90%;
+    }
+    .email-modal__decline-offer{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width: 375px) {
+    body{
+        display: block;
+    }
+    .menu-buttons{
+        display: none;
+        width: 0px;
+        height: 0px;
+    }
+}
